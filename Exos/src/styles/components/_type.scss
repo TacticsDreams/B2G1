@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  font-size: $size-text;
+  line-height: 1.5;
+  color: $c-text;
+  width: 100%;
+  height: 100%;
+}
+.app {
+  background-image: url('../../assets/images/landscape-1844229_1280.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 0.6s;
+}
+.app--night {
+  background-image: url('../../assets/images/landscape-1844231_1280.png');
+  color: white;
+}
+.timer {
+  transition-duration: 0.4s;
+}
+.app-night .timer {
+  transition-duration: 0.4s;
+}
+.active {
+  background-color: black;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: 0;
+  transition-duration: 0.4s;
+  transition-property: margin-left margin-right;
+}
+.app--night .active {
+  background-color: white;
+  margin-right: 0;
+  margin-left: auto;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+button {
+  margin: auto;
+}
+h1 {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.title {
+  color: $c-alt;
+}
