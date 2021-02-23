@@ -2,12 +2,10 @@ console.info('Hello world');
 
 let btn = document.querySelector('button');
 btn.addEventListener('click', (e) => {
-    let bg = document.querySelector('.app');
-    bg.classList.toggle('app--night');
-    let title = document.querySelector('h1');
-    if (bg.classList.contains('app--night')) {
-        title.innerHTML = "Bonsoir tout le monde.";
+    let body = document.querySelector("body");
+    if (body.getAttribute("data-open") == "false") {
+        body.setAttribute("data-open", "true");
     } else {
-        title.innerHTML = "Bonjour tout le monde.";
+        body.setAttribute("data-open", "false");
     }
 });

@@ -6,52 +6,66 @@ body {
   width: 100%;
   height: 100%;
 }
-.app {
-  background-image: url('../../assets/images/landscape-1844229_1280.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition-duration: 0.6s;
+.mainBox {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/images/snow-h.png');
 }
-.app--night {
-  background-image: url('../../assets/images/landscape-1844231_1280.png');
-  color: white;
-}
-.timer {
-  transition-duration: 0.4s;
-}
-.app-night .timer {
-  transition-duration: 0.4s;
-}
-.active {
-  background-color: black;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: auto;
-  margin-left: 0;
-  transition-duration: 0.4s;
-  transition-property: margin-left margin-right;
-}
-.app--night .active {
-  background-color: white;
-  margin-right: 0;
-  margin-left: auto;
-}
-ul {
-  list-style: none;
+.topheader {
   display: flex;
-  justify-content: space-between;
-  padding: 0 50px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #333;
+  color: #bbb;
+  z-index: 5;
 }
-button {
-  margin: auto;
-}
-h1 {
-  width: 50%;
-  text-align: center;
-  margin: auto;
+.navList {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  flex-direction: column;
+
+  & li {
+    padding: 1em;
+    text-align: center;
+  }
 }
 
+h1, h2, h3, p {
+  margin: 0;
+}
 .title {
   color: $c-alt;
+}
+.imagery {
+  position: relative;
+  left: 65vw;
+  top: 55vh;
+  z-index: 3;
+  background-color: blanchedalmond;
+  border-radius: 50%;
+}
+.bottomBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 35vh;
+  width: 100%;
+  padding: 2vmin;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 5vmin;
+}
+
+@media (orientation: portrait) {
+  .mainBox {
+    background-image: url('../../assets/images/snow-h.png');
+  }
+}
+
+@media (orientation: landscape) {
+  .mainBox {
+    background-image: url('../../assets/images/snow-l.png');
+  }
 }

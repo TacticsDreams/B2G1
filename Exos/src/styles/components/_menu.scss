@@ -1,0 +1,11 @@
+body[data-open="false"] {
+    .navList {
+        display: none;
+    }
+}
+body[data-open="true"] {
+    .navList {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
